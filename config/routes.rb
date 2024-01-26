@@ -15,6 +15,16 @@ Rails.application.routes.draw do
 
   root 'client_business#landing'
   
+  get 'main/evenly/:number1/:number2', to: 'main#evenly', as: 'evenly'
+
+  get '/cubed', to: 'main#cubed', as: 'cubed'
+
+  get 'main/palindrome/:input_string', to: 'main#palindrome', as: 'palindrome'
+
+  get 'main/random/:min_number/:max_number', to: 'main#random', as: 'random'
+
+  get 'main/madlib/:noun/:verb/:adjective', to: 'main#madlib', as: 'madlib'
+  
   # Defines the root path route ("/")
   # root "posts#index"
 end
